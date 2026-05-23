@@ -35,6 +35,36 @@ public abstract class Menu {
         this.scanner = scanner;
     }
 
+      //opciones del menu
+    //cada opcion tiene asigando un numero
+    // cada opcion tiene que tener un nombre
+    protected String nombre;
+    protected int numeroOpcion ;
+    protected String mensaje;
+    protected String texto;
+    //la opcion menu tiene que tener un numero y nombre asociado
+    public void cualidadesopcionMenu(String nombre, int numero, String mensaje,String leerTexto,String texto)
+        this.nombre = nombre;
+        this.numeroOpcion = numero;
+        this.mensaje = mensaje;
+        this.texto = texto;
+    }
+    
+    public void accionarOpcionMenu( int numero){
+    }
+    //este metodo permite encapsular la logica de mandar un mensaje y que el usuario ingrese un numero
+    public int leerEntero(String mensaje){
+        System.out.println(mensaje);
+        int entero = scanner.nextInt();
+        return entero;
+    }
+    //este metodo permite encapsular la logica de mandar un mensaje y que el usuario ingrese un texto
+    public String leerTexto(String mensaje){
+      System.out.println(mensaje);
+      String texto =scanner.nextLine();
+      return texto;
+    }
+
     // TODO:
     // Declarar método abstracto para mostrar el menú.
     public abstract void mostrarMenu();
