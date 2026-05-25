@@ -1,5 +1,8 @@
 package com.techlab.articulo.menu;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * CONSIGNA DE ESTA CLASE
  * ------------------------------------------------------------
@@ -59,8 +62,40 @@ package com.techlab.articulo.menu;
  */
 public class MenuArticulos extends Menu {
 
+    private List<opcionMenu> opciones = new ArrayList<>();
+
     public MenuArticulos(java.util.Scanner scanner) {
         super(scanner);
+
+        opciones.add(new opcionMenu("ingresar articulo",1, ()->{
+            
+            System.out.println("Listando...");
+         }));
+         
+        opciones.add(new opcionMenu("listar articulos",2, ()->{
+            
+            System.out.println("Listando...");
+         }));
+
+         opciones.add(new opcionMenu("consultar articulo",3, ()->{
+            
+            System.out.println("Listando...");
+         }));
+
+            opciones.add(new opcionMenu("modificar articulo",3, ()->{
+            
+            System.out.println("Listando...");
+         }));
+
+         opciones.add(new opcionMenu("eliminar articulo",3, ()->{
+            
+            System.out.println("Listando...");
+         }));
+
+
+
+        
+
     }
 
     @Override
@@ -73,6 +108,9 @@ public class MenuArticulos extends Menu {
         System.out.println("5 - Eliminar artículo");
         System.out.println("0 - Volver");
     }
+
+
+    
 
     @Override
     public void ejecutar() {

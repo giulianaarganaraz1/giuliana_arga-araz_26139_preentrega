@@ -2,6 +2,8 @@ package com.techlab.articulo.menu;
 
 import java.util.Scanner;
 
+import javax.tools.OptionChecker;
+
 /**
  * CONSIGNA DE ESTA CLASE
  * ------------------------------------------------------------
@@ -26,6 +28,7 @@ import java.util.Scanner;
  * "menú genérico" instanciable. Solo debe servir como base para:
  * - MenuArticulos
  * - MenuCategorias
+ * 
  */
 public abstract class Menu {
 
@@ -35,23 +38,40 @@ public abstract class Menu {
         this.scanner = scanner;
     }
 
+
+
       //opciones del menu
     //cada opcion tiene asigando un numero
     // cada opcion tiene que tener un nombre
-    protected String nombre;
-    protected int numeroOpcion ;
-    protected String mensaje;
-    protected String texto;
-    //la opcion menu tiene que tener un numero y nombre asociado
-    public void cualidadesopcionMenu(String nombre, int numero, String mensaje,String leerTexto,String texto)
-        this.nombre = nombre;
-        this.numeroOpcion = numero;
-        this.mensaje = mensaje;
-        this.texto = texto;
+    public class opcionMenu {
+
+        protected String nombre;
+        protected int codigoOpcion;
+        protected Runnable accion;
+        
+
+        public opcionMenu(String nombre,int codigoOpcion,Runnable accion){
+            this.nombre = nombre;
+            this.codigoOpcion = codigoOpcion;
+            this.accion=accion;
+        }
+
+        public void ejecutar() {
+        accion.run(); // ejecuta lo que le pase el hijo
+
     }
+
+   
+}
+        
+        
+        
+
     
-    public void accionarOpcionMenu( int numero){
-    }
+
+    //la opcion menu tiene que tener un numero y nombre asociado
+
+
     //este metodo permite encapsular la logica de mandar un mensaje y que el usuario ingrese un numero
     public int leerEntero(String mensaje){
         System.out.println(mensaje);

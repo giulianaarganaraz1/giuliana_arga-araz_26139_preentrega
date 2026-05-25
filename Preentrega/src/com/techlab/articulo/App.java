@@ -65,17 +65,11 @@ package com.techlab.articulo;
 //
 
 // Importamos Scanner para leer datos por consola.
-import java.util.Scanner;
+
 
 // Importamos los menús que luego deberán completarse.
-import com.techlab.articulo.menu.MenuArticulos;
-import com.techlab.articulo.menu.MenuCategorias;
 
-public class App {
-
-    public static void main(String[] args) {
-
-        // ============================================================
+ // ============================================================
         // INSTRUCCIONES PARA ESTA CLASE
         // ============================================================
         //
@@ -100,11 +94,49 @@ public class App {
         // El main solo debe coordinar el flujo principal.
         //
         // ============================================================
+import java.util.Scanner;
 
+import com.techlab.articulo.menu.Menu;
+import com.techlab.articulo.menu.MenuArticulos;
+import com.techlab.articulo.menu.MenuCategorias;
+
+public class App {
+
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        
+        MenuArticulos menuPrincipal = new MenuArticulos(scanner);
+
+
+        do {
+             int menuSeleccionado;
+            System.out.println("Bienvenido a la Tienda");
+            menuSeleccionado= menuPrincipal.leerEntero("seleccione el menu deseado");
+
+            System.err.println("1. ir al menu de articulos");
+            System.out.println("2. ir al menu de categorias");
+
+           
+            
+           
+
+        } while (condition:var(boolean));
+
+
+     
+        
+
+
+
+
+        
+
+        
+        
 
         // TODO:
         // Crear aquí los repositorios genéricos.
+
 
         // TODO:
         // Crear aquí los menús y pasarles lo que necesiten por constructor.
@@ -115,3 +147,4 @@ public class App {
         scanner.close();
     }
 }
+

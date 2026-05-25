@@ -49,8 +49,16 @@ public abstract class Articulo implements Calculable, Identificable {
     protected double precio;
     protected Categoria categoria;
 
-    // TODO:
+    public Articulo(int codigo, String nombre, double precio,Categoria categoria){
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.categoria = categoria;
+        this.precio = precio;
+
+        }
     // Crear constructor completo.
+    // TODO:
+   
 
     // TODO:
     // Crear getters y setters.
