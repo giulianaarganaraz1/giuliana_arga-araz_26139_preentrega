@@ -2,6 +2,7 @@ package com.techlab.articulo.menu;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale.Category;
 
 /**
  * CONSIGNA DE ESTA CLASE
@@ -112,9 +113,11 @@ public class MenuArticulos extends Menu {
     // Implementar todos los métodos del CRUD de artículos.
 
     protected String ingresarArticulo(){
-        String nombreArticulo = leerTexto("ingrese el nombre del articulo")
-        double precioArticulo = leerDouble("ingrese el precio del articulo")
-        
+        String nombreArticulo = leerTexto("ingrese el nombre del articulo");
+        double precioArticulo = leerDouble("ingrese el precio del articulo");
+        //Category categoriaArticulo =  
+          codigoArticulo = Math.random()*10;
+
         
 
     }

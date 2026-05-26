@@ -73,13 +73,13 @@ public abstract class Menu {
     //la opcion menu tiene que tener un numero y nombre asociado
 
 
-    //este metodo permite encapsular la logica de mandar un mensaje y que el usuario ingrese un numero
+
     public int leerEntero(String mensaje){
         System.out.println(mensaje);
         int entero = scanner.nextInt();
         return entero;
     }
-    //este metodo permite encapsular la logica de mandar un mensaje y que el usuario ingrese un texto
+
     public String leerTexto(String mensaje){
       System.out.println(mensaje);
       String texto =scanner.nextLine();
@@ -87,7 +87,11 @@ public abstract class Menu {
 
     }
 
-    protected 
+    public double leerDouble(String mensaje){
+        System.out.println(mensaje);
+        double decimal= scanner.nextDouble();
+        return decimal;
+    }
 
     // TODO:
     // Declarar método abstracto para mostrar el menú.
